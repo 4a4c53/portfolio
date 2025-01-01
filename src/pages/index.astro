@@ -53,9 +53,12 @@ import Lines from "#components/lines.astro";
     user-select: none; /* Non-prefixed version; currently supported by Chrome and Opera */
 
     text-orientation: mixed;
-
+    transform-origin: center;
+    transition: transform 0.5s ease;
+    
     @media screen and (max-width: 600px) {
       writing-mode: vertical-rl;
+      transform: rotate(360deg);
     }
   }
 
