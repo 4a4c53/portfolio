@@ -2,13 +2,25 @@
   "name": "portfolio",
   "type": "module",
   "version": "0.0.1",
+  "license": "MIT",
   "author": {
     "name": "José L Silva",
     "email": "joseluis@4a4c53.com",
     "url": "http://4a4c53.com"
   },
+  "config": {
+    "port": "4453"
+  },
+  "imports": {
+    "#*": "./src/*"
+  },
+  "homepage": "https://github.com/4a4c53/portfolio#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4a4c53/portfolio.git"
+  },
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --port $npm_package_config_port",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
