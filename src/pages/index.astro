@@ -1,16 +1,108 @@
 ---
 import Layout from "#layouts/Layout.astro";
+import Lines from "#components/lines.astro";
 ---
 
 <Layout>
-  <main>Home page</main>
+  <main>
+    <article>
+      <header>
+        <div id="about">
+          <p>me</p>
+          <Lines direction="down" />
+        </div>
+        <div id="projects">
+          <p>website</p>
+          <Lines direction="down" />
+        </div>
+      </header>
+      <section id="contact">
+        <div id="name">joseluis</div>
+        <div id="at">@</div>
+        <div id="nick">4a4c53</div>
+        <div id="tld">.com</div>
+      </section>
+      <footer>
+        <Lines direction="sides" />
+        <div id="social-media">
+          <Lines direction="up" />
+          <p>social media</p>
+        </div>
+        <div id="email">
+          <Lines direction="up" />
+          <p>email</p>
+        </div>
+      </footer>
+    </article>
+  </main>
 </Layout>
 
 <style>
   main {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    min-height: 100dvh;
+    place-content: center;
+  }
+
+  article {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version; currently supported by Chrome and Opera */
+
+    text-orientation: mixed;
+
+    @media screen and (max-width: 600px) {
+      writing-mode: vertical-rl;
+    }
+  }
+
+  article > header,
+  article > footer,
+  article > section#contact {
+    display: grid;
+    grid-template-columns: 246.31px 30.8px 184.73px 123.16px;
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 140.75px 17.59px 105.56px 70.38px;
+    }
+  }
+
+  article > header > div#about,
+  article > header > div#projects,
+  article > footer > div#social-media,
+  article > footer > div#email {
+    line-height: 0;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  article > header > div#projects {
+    grid-column: 3 / 5;
+  }
+
+  article > section#contact {
+    line-height: 1;
+    font-size: 3.5rem;
+
+    @media screen and (max-width: 600px) {
+      font-size: 2rem;
+    }
+  }
+
+  footer {
+    margin-top: 0.625rem;
+  }
+
+  article > footer > div#social-media {
+    grid-column: 2 / 4;
+    grid-row: 1;
+  }
+  article > footer > div#email {
+    height: 10rem;
+    grid-column: 1 / 5;
+    grid-row: 2;
   }
 </style>
