@@ -77,6 +77,10 @@ import Lines from "#components/lines.astro";
     line-height: 0;
     text-align: center;
     font-size: 1.5rem;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1rem;
+    }
   }
 
   article > header > div#projects {
@@ -94,14 +98,19 @@ import Lines from "#components/lines.astro";
 
   footer {
     margin-top: 0.625rem;
+
+    @media screen and (max-width: 600px) {
+      margin-top: 0;
+      margin-right: 0.625rem;
+    }
   }
 
   article > footer > div#social-media {
     grid-column: 2 / 4;
     grid-row: 1;
   }
+
   article > footer > div#email {
-    height: 10rem;
     grid-column: 1 / 5;
     grid-row: 2;
   }
