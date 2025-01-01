@@ -1,0 +1,71 @@
+---
+interface Props {
+  direction: "up" | "down" | "sides";
+}
+
+const { direction } = Astro.props;
+---
+
+{direction === "up" && <div class="up-line" />}
+{
+  direction === "sides" ? (
+    <>
+      <div id="left-line" class="up-line" />
+      <div id="right-line" class="up-line" />
+    </>
+  ) : (
+    <hr />
+  )
+}
+{direction === "down" && <div class="down-line" />}
+
+<style>
+  hr {
+    height: 0.5rem;
+    border-width: 0;
+    width: 0.125rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    background-color: light-dark(var(--color-primary), var(--color-secondary));
+
+    @media screen and (max-width: 600px) {
+      margin-bottom: auto;
+      height: 0.125rem;
+      width: 0.5rem;
+    }
+  }
+
+  div {
+    height: 4rem;
+    border-style: solid;
+    border-width: 0.125rem;
+    border-color: light-dark(var(--color-primary), var(--color-secondary));
+  }
+
+  .down-line {
+    border-bottom-width: 0;
+  }
+
+  .up-line {
+    border-top-width: 0;
+  }
+
+  #left-line,
+  #right-line {
+    height: 100%;
+    border-top-width: 0;
+    border-bottom-width: 0;
+  }
+
+  #right-line {
+    grid-row: 1;
+    grid-column: 1;
+    border-right-width: 0;
+  }
+
+  #left-line {
+    grid-row: 1;
+    grid-column: 4;
+    border-left-width: 0;
+  }
+</style>
