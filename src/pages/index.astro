@@ -45,17 +45,12 @@ import Lines from "#components/lines.astro";
   }
 
   article {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version; currently supported by Chrome and Opera */
 
     text-orientation: mixed;
     transform-origin: center;
     transition: transform 0.5s ease;
-    
+
     @media screen and (max-width: 600px) {
       writing-mode: vertical-rl;
       transform: rotate(360deg);
@@ -66,10 +61,10 @@ import Lines from "#components/lines.astro";
   article > footer,
   article > section#contact {
     display: grid;
-    grid-template-columns: 246.31px 30.8px 184.73px 123.16px;
+    grid-template-columns: 1fr 34px 203px 0.5fr;
 
     @media screen and (max-width: 600px) {
-      grid-template-columns: 140.75px 17.59px 105.56px 70.38px;
+      grid-template-columns: 1fr 20px 116px 0.5fr;
     }
   }
 
