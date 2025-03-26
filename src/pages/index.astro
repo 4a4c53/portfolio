@@ -47,13 +47,8 @@ import Lines from "#components/lines.astro";
   article {
     user-select: none;
 
-    text-orientation: mixed;
-    transform-origin: center;
-    transition: transform 0.5s ease;
-
     @media screen and (max-width: 600px) {
       writing-mode: vertical-rl;
-      transform: rotate(360deg);
     }
   }
 
