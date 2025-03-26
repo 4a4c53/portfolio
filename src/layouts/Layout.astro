@@ -1,11 +1,61 @@
+---
+const SEO = {
+  title: "José L Silva | Desarrollador Web Full Stack",
+  description:
+    "Portfolio profesional de José L Silva, desarrollador web full stack especializado en tecnologías modernas.",
+};
+---
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO básico -->
+    <title>{SEO.title}</title>
+    <meta name="description" content={SEO.description} />
+    <meta name="author" content="José L Silva" />
+    <meta
+      name="keywords"
+      content="desarrollador web, full stack, portfolio, javascript, react, astro"
+    />
+
+    <!-- Favicons optimizados -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Tema y color -->
+    <meta
+      name="theme-color"
+      content="#4a4c53"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#f5f5f6"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={SEO.title} />
+    <meta property="og:description" content={SEO.description} />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={SEO.title} />
+    <meta property="twitter:description" content={SEO.description} />
+    <meta property="twitter:image" content="/og-image.jpg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={Astro.url} />
   </head>
   <body>
     <slot />
