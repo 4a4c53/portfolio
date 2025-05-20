@@ -1,0 +1,27 @@
+{
+  "id": "/",
+  "lang": "en",
+  "start_url": "/",
+  "name": "José L Silva | Desarrollador Web Full Stack",
+  "short_name": "José Silva",
+  "description": "Portafolio profesional de José L Silva, desarrollador web full stack con experiencia en aplicaciones modernas, diseño responsivo y tecnologías de vanguardia.",
+  "scope": "/",
+  "theme_color": "#4a4c53",
+  "background_color": "#f5f5f6",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
