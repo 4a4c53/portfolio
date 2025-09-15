@@ -1,6 +1,8 @@
 ---
+const { title } = Astro.props;
+
 const SEO = {
-  title: "José L Silva | Desarrollador Web Full Stack",
+  title: title || "José L Silva | Desarrollador Web Full Stack",
   description:
     "Descubre el portfolio profesional de José L Silva, desarrollador web full stack especializado en crear soluciones innovadoras y eficientes con tecnologías modernas como JavaScript, React y Astro.",
 };
