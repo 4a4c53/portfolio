@@ -1,6 +1,5 @@
 ---
 const { title } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const SEO = {
   title: title || "José L Silva | Desarrollador Web Full Stack",
@@ -44,20 +43,20 @@ const SEO = {
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:url" content="https://4a4c53.com/" />
     <meta property="og:title" content={SEO.title} />
     <meta property="og:description" content={SEO.description} />
     <meta property="og:image" content="/og-image.jpg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:url" content="https://4a4c53.com/" />
     <meta property="twitter:title" content={SEO.title} />
     <meta property="twitter:description" content={SEO.description} />
     <meta property="twitter:image" content="/og-image.jpg" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href={canonicalURL} />
+    <link rel="canonical" href="https://4a4c53.com/" />
   </head>
   <body>
     <slot />
